@@ -16,17 +16,12 @@ const AddAccount =  mongoose.model("AddAccount",{
         trim: true,
     },
     Password:{
-        type: Number,
+        type: String,
         required: true,
-        length: 10,
-        validate(value){
-            if(value >10){
-                throw new Error("number must be 10 digits");
-            }
-        },
+      
     },
     NationalId:{
-        type: Number,
+        type: String,
         required: true, 
         trim: true,
     },
@@ -35,7 +30,7 @@ const AddAccount =  mongoose.model("AddAccount",{
         required: true,
     },
     Account:{
-        type: Number,
+        type: String,
         required: true,
         },
 

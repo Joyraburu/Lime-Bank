@@ -21,6 +21,7 @@ app.post("/addaccount", (req, res)=>{
         res.send(addaccount)
     })
     .catch((error) => {
+        console.log (error)
         res.status(400).send(error)
     })
 })
@@ -33,6 +34,7 @@ app.post("/createcustomer", (req, res)=>{
         res.send(createcustomer)
     })
     .catch((error) => {
+        console.log (error)
         res.status(400).send(error)
     })
 })
@@ -45,6 +47,7 @@ app.get("/customer", (req,res) =>{
         res.send(customer)
     })
     .catch((error)=>{
+        console.log (error)
         res.status(400).send (error)
     })
 })

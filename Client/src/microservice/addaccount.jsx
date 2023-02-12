@@ -56,7 +56,7 @@ handleSubmit= event =>{
         Email: this.state.Email,
         Account: this.state.Account,
     };
-
+    console.log(userObject)
     axios
     .post('http://localhost:8080/account', userObject)
     .then((response)=>{
@@ -91,7 +91,7 @@ this.props.history.push("/");
                     <div>
                         <div><label htmlFor="NationalId">National ID</label></div>
                         <input type ="number" placeholder="eg. 1345667" 
-                        value= {this.state.vaccinated} onChange={this.handleVaccinated}/>
+                        value= {this.state.NationalId} onChange={this.handleNationalId}/>
                     </div>
                     <div>
                         <div><label htmlFor="Email">Email</label></div>
@@ -104,7 +104,7 @@ this.props.history.push("/");
                         value= {this.state.Account} onChange={this.handleAccount}/>
                     </div>
 
-                    <button>Create</button>
+                    <button type= "submit">Create</button>
                 </form>
                 </div>
             </div>

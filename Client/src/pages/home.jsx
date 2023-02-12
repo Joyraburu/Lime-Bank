@@ -19,10 +19,6 @@ const Home = () =>{
         </p>
         </div>
         <Customer/>
-        <div id= "quick">
-      <button>Create Customer</button> 
-        <button>Add Account</button>
-        </div>
     
 </div>
 );

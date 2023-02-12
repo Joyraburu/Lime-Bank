@@ -9,7 +9,7 @@ const CreateCustomer =  mongoose.model("CreateCustomer",{
         required: true,
         trim: true,
         lowercase: true,
-        trim: true,
+        
     },
         Name:{
         type: String,
@@ -17,17 +17,17 @@ const CreateCustomer =  mongoose.model("CreateCustomer",{
         trim: true,
     },
     Password:{
-        type: Number,
-        length: 10,
+        type: String,
         required:true,
-        validate(value){
-            if(value >10){
+       /*validate(value){
+            if(value.length >9){
                 throw new Error("number must be 10 digits");
             }
-        },
+
+        },*/
     },
     NationalId:{
-        type: Number,
+        type: String,
         required: true, 
         trim: true,
     },
@@ -36,7 +36,7 @@ const CreateCustomer =  mongoose.model("CreateCustomer",{
         required: true,
     },
     Account:{
-        type: Number,
+        type: String,
         required: true,
         },
 

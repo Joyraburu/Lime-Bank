@@ -26,9 +26,10 @@ handleSubmit= event =>{
         UserName: this.state.UserName,
         Password: this.state.Password,
     };
+    console.log(userObject)
 
     axios
-    .get('http://localhost:8080/customer', userObject)
+    .post('http://localhost:8080/login', userObject)
     .then((response)=>{
 console.log(response.data);
 this.props.history.push("/");
@@ -55,7 +56,7 @@ this.props.history.push("/");
                         value={this.state.Password} onChange={this.handlePassword}/>
                     </div>
 
-                    <button>Log in</button>
+                    <button type= "submit" >Log in</button>
                 </form>
                 </div>
             </div>

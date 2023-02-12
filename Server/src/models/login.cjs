@@ -10,14 +10,8 @@ UserName:{
     trim: true,
 },
 Password:{
-    type: Number,
+    type: String,
     required: true,
-    length: 10,
-    validate(value){
-        if(value >10){
-            throw new Error("number must be 10 digits");
-        }
-    },
 },
 });
  module.exports = Customer;

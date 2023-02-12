@@ -5,9 +5,8 @@ import AboutUs from './Pages/aboutus';
 import Home from './Pages/home'
 import AddAccount from './microservice/addaccount';
 import CreateCustomer from './microservice/createcustomer';
-
+import Customer from './pages/login';
 import './app.css'
-import Card from './microservice/profile';
 
 const App = ()=>{
 
@@ -22,6 +21,7 @@ const App = ()=>{
             <Route path ="/aboutus" component ={AboutUs}/>
             <Route path = "/addaccount" component = {AddAccount}/>
             <Route path ="/createcustomer" component ={CreateCustomer}/>
+            <Route path ="/login" component ={Customer}/>
             
         </Routes> 
         </div>
